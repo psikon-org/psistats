@@ -75,7 +75,7 @@ pipeline {
                   appveyorBuild(
                     accountToken: TOKEN,
                     accountName: 'alex-dow',
-                    projectSlug: 'psistats-rs',
+                    projectSlug: 'psistats',
                     branch: env.GIT_BRANCH,
                     commitId: env.GIT_COMMIT,
                     buildNumber: env.BUILD_NUMBER
@@ -89,7 +89,7 @@ pipeline {
                 script {
                   appveyorDownloadAll(
                     accountName: 'alex-dow',
-                    projectSlug: 'psistats-rs',
+                    projectSlug: 'psistats',
                     buildVersion: env.APPVEYOR_BUILD_VERSION,
                     targetDir: 'target/release/artifacts'
                   )
